@@ -29,22 +29,23 @@ This is a fullstack application for showing geographical information of entities
 * [Redis](https://redis.io/) - Backend for running scheduled jobs
 * [Postgresql](https://www.postgresql.org/) - Database.
 * [Celery](https://docs.celeryproject.org/en/stable/index.html) - Distributed Task Queue.
+* [PostGIS](https://postgis.net/) - Spatial and Geographic objects for PostgreSQL
 * [FactoryBoy](https://factoryboy.readthedocs.io/en/stable/) - Test fixture creator/ dummy data generator.
 ### Project Structure Explained
   - manage.py is coming from django framework, resides in the main folder and used to setup the server.
-  - All project settings are inside the ".django-driver-tracker/mapApp" folder.
+  - All project settings are inside the "./django-driver-tracker/mapApp" folder.
   - mapApp is our django application which serves the backend. It has models, views, serializers for the database operations.
-  - We populate dummy data and insert into the database. In driverTracker/tests folder we have     factories.py file which generates and saves the initial drivers data for us. In "How To Run" section we will explain how to generate fake initial data.
-  - We have 2 frontends at the moment, one of them is in .django-driver-tracker/static folder and can be ignored. However, it also shows a map with markers and reachable at http://127.0.0.1:8000django-driver-tracker/map. I also implemented a more complex UI with React and React Hooks inside the .django-driver-tracker/frontend folder. And I would prefer using the latter one as a frontend application.
+  - We populate dummy data and insert into the database. In "driverTracker/tests" folder we have    factories.py file which generates and saves the initial drivers data for us. In "How To Run" section we will explain how to generate fake initial data.
+  - We have 2 frontends at the moment, one of them is in .django-driver-tracker/static folder and can be ignored. However, it also shows a map with markers and reachable at http://127.0.0.1:8000/driverTracker/map. I also implemented a more complex UI with React and React Hooks inside the .django-driver-tracker/frontend folder. And I would prefer using the latter one as a frontend application.
   - In mapApp/fixtures folder I stored an example information about drivers as a json file.
-  - Scheduled tasks are implemented at ".driverTracker/mapApp/tasks.py". It gets drivers from the database and updates each driver's locations in every 5 seconds.
+  - Scheduled tasks are implemented at "./driverTracker/mapApp/tasks.py". It gets drivers from the database and updates each driver's locations in every 5 seconds.
   - Frontend calls the backend with 'api/markers' and gets all drivers as a geojson object. Then shows them on the map. Each driver has a unique color and can be tracked easily. 
   - Drivers positions are randomly updated in a range of 100kms.
 ## Getting Started
 In order to run this project some libraries should be installed and configured. I will explain to install the libraries and frameworks for Linux. But Mac users can use 'brew' instead of 'sudo apt-get'.
 
 ### Install
-1) We need to install the GDAL (Geospatial Data Abstraction Library), PostgreGIS, Redis and Postgres
+1) We need to install the GDAL (Geospatial Data Abstraction Library), PostGIS, Redis and Postgres
  ```sh
  sudo apt-get install gdal-bin
  sudo apt-get install libpq5
@@ -58,7 +59,7 @@ python3 -m venv virtual-env
 source virtual-env/bin/activate
 pip3 install -r requirements.txt
  ```
-3) We should create and activate a postgres database. It is created without password in this example. We can alsocreate the database using PgAdmin4 with GUI.
+3) We should create and activate a postgres database. It is created without password in this example. We can also create the database using PgAdmin4 with GUI.
  ```sh
   sudo service postgresql initdb
   sudo service enable postgresql
@@ -103,7 +104,7 @@ Finally, we switch to frontend and install packages.
    ```
 ### How To Run
 1) Redis-server and Postgres should be up and running in the background.
-2) In driverTracker/mapApp/management/commands, seed.py file creates a django command to populate the data from terminal. (default: 10 drivers). We can run this script;
+2) In "/driverTracker/mapApp/management/commands", seed.py file creates a django command to populate the data from terminal. (default: 10 drivers). We can run this script;
    ```sh
     python3 manage.py seed.py
    ```
