@@ -1,0 +1,214 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.620757,
+          7.95328
+        ]
+      },
+      "properties": {
+        "driverName": "Roberta Delacruz",
+        "driverCityOrigin": "Cathychester",
+        "driverLanguage": "nl",
+        "driverPhone": "569.891.8202",
+        "driverInfo": "Configurable incremental protocol",
+        "licensePlate": "CPX 511",
+        "kmDriven": 80817
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.541876,
+          18.2998875
+        ]
+      },
+      "properties": {
+        "driverName": "Samantha Rodriguez",
+        "driverCityOrigin": "Port Ashley",
+        "driverLanguage": "de",
+        "driverPhone": "623-225-0524",
+        "driverInfo": "Optimized interactive core",
+        "licensePlate": "291NZT",
+        "kmDriven": 40605
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.117279,
+          -24.875247
+        ]
+      },
+      "properties": {
+        "driverName": "Tyler Knox",
+        "driverCityOrigin": "Juliechester",
+        "driverLanguage": "nl",
+        "driverPhone": "(535)936-9309x8413",
+        "driverInfo": "Enhanced multimedia capacity",
+        "licensePlate": "Y 598580",
+        "kmDriven": 12308
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.831966,
+          82.97843
+        ]
+      },
+      "properties": {
+        "driverName": "Tanya Hinton",
+        "driverCityOrigin": "East Noah",
+        "driverLanguage": "ar",
+        "driverPhone": "+1-791-177-5775x26830",
+        "driverInfo": "Customizable executive data-warehouse",
+        "licensePlate": "LFE-340",
+        "kmDriven": 86803
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.044262,
+          73.967915
+        ]
+      },
+      "properties": {
+        "driverName": "Stephanie Henderson",
+        "driverCityOrigin": "West Brandonville",
+        "driverLanguage": "nl",
+        "driverPhone": "545.397.5797x14619",
+        "driverInfo": "Multi-tiered executive service-desk",
+        "licensePlate": "098DT",
+        "kmDriven": 35680
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.203321,
+          -30.9380695
+        ]
+      },
+      "properties": {
+        "driverName": "Christina Sullivan",
+        "driverCityOrigin": "South Caroline",
+        "driverLanguage": "fr",
+        "driverPhone": "001-625-491-2435",
+        "driverInfo": "Synergistic discrete throughput",
+        "licensePlate": "I37 9YT",
+        "kmDriven": 24471
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.891109,
+          -71.4905845
+        ]
+      },
+      "properties": {
+        "driverName": "Richard Payne",
+        "driverCityOrigin": "Port Melissatown",
+        "driverLanguage": "de",
+        "driverPhone": "+1-993-239-0941x306",
+        "driverInfo": "Ergonomic hybrid support",
+        "licensePlate": "153 BDH",
+        "kmDriven": 45962
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.8471,
+          -20.5362565
+        ]
+      },
+      "properties": {
+        "driverName": "Michael Hunt",
+        "driverCityOrigin": "Danaview",
+        "driverLanguage": "nl",
+        "driverPhone": "628.552.6508x7042",
+        "driverInfo": "Innovative fault-tolerant software",
+        "licensePlate": "1T V1430",
+        "kmDriven": 39822
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.272151,
+          -37.81075
+        ]
+      },
+      "properties": {
+        "driverName": "Darren Miller",
+        "driverCityOrigin": "Contrerasmouth",
+        "driverLanguage": "de",
+        "driverPhone": "199.150.2291",
+        "driverInfo": "Optional regional infrastructure",
+        "licensePlate": "4Z 0E4IVY",
+        "kmDriven": 12414
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.541552,
+          76.120339
+        ]
+      },
+      "properties": {
+        "driverName": "David Grant",
+        "driverCityOrigin": "Port Anthonyland",
+        "driverLanguage": "nl",
+        "driverPhone": "955.903.7923x6408",
+        "driverInfo": "Operative homogeneous challenge",
+        "licensePlate": "07-6403I",
+        "kmDriven": 38629
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.217668,
+          -79.688614
+        ]
+      },
+      "properties": {
+        "driverName": "James Giles",
+        "driverCityOrigin": "Arnoldbury",
+        "driverLanguage": "es",
+        "driverPhone": "+1-972-997-5635x635",
+        "driverInfo": "Re-engineered grid-enabled instruction set",
+        "licensePlate": "158 ZBA",
+        "kmDriven": 93984
+      }
+    }
+  ]
+}
