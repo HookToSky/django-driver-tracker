@@ -126,3 +126,9 @@ Finally, we switch to frontend and install packages.
 
  Front-end runs in http://127.0.0.1:3000/map-drivers
  Now, we should be able to see a map with 10 markers. The data is updated in the backend periodically. We can refresh the page and observe markers moving.
+
+ ### If I Had More Time...
+  - I would like to update my django model for Markers to get a history object to store all coordinates for each driver. Then I could draw a line on the map to show the distance they achieved from the start. (as driver locations are updated in every 5 seconds)
+  - Functionality to register/delete drivers (rather than using the admin panel or sending http request to admin to add new data) and save them through the react frontend with another api endpoint.
+  - I would like to deploy the project on Heroku.
+ 
