@@ -11,8 +11,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#how-to-run">Install</a></li>
-        <li><a href="#how-to-run">Configuration</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#configuration">Configuration</a></li>
         <li><a href="#how-to-run">How To Run</a></li>
       </ul>
     </li>
@@ -30,19 +30,18 @@ This is a fullstack application for showing geographical information of entities
 * [Postgresql](https://www.postgresql.org/) - Database.
 * [Celery](https://docs.celeryproject.org/en/stable/index.html) - Distributed Task Queue.
 * [FactoryBoy](https://factoryboy.readthedocs.io/en/stable/) - Test fixture creator/ dummy data generator.
-
-## Getting Started
-In order to run this project some libraries should be installed and configured. I will explain to install the libraries and frameworks for Linux. But Mac users can use 'brew' instead of 'sudo apt-get'.
-### Project structure
+### Project Structure Explained
   - manage.py is coming from django framework, resides in the main folder and used to setup the server.
   - All project settings are inside the "./driverTracker/mapApp" folder.
   - mapApp is our django application which serves the backend. It has models, views, serializers for the database operations.
   - We populate dummy data and insert into the database. In driverTracker/tests folder we have     factories.py file which generates and saves the initial drivers data for us. In "How To Run" section we will explain how to generate fake initial data.
-  - We have 2 frontends at the moment, one of them is in ./driverTracker/static folder and can be ignored. However, it also shows a map with markers and reachable at "http://127.0.0.1:8000/driverTracker/map". I also implemented a more complex UI with React and React Hooks inside the ./driverTracker/frontend folder. And I would prefer using the latter one as a frontend application.
+  - We have 2 frontends at the moment, one of them is in ./driverTracker/static folder and can be ignored. However, it also shows a map with markers and reachable at http://127.0.0.1:8000/driverTracker/map. I also implemented a more complex UI with React and React Hooks inside the ./driverTracker/frontend folder. And I would prefer using the latter one as a frontend application.
   - In mapApp/fixtures folder I stored an example information about drivers as a json file.
   - Scheduled tasks are implemented at ".driverTracker/mapApp/tasks.py". It gets drivers from the database and updates each driver's locations in every 5 seconds.
   - Frontend calls the backend with 'api/markers' and gets all drivers as a geojson object. Then shows them on the map. Each driver has a unique color and can be tracked easily. 
   - Drivers positions are randomly updated in a range of 100kms.
+## Getting Started
+In order to run this project some libraries should be installed and configured. I will explain to install the libraries and frameworks for Linux. But Mac users can use 'brew' instead of 'sudo apt-get'.
 
 ### Install
 1) We need to install the GDAL (Geospatial Data Abstraction Library), PostgreGIS, Redis and Postgres
