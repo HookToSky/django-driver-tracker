@@ -20,7 +20,7 @@
 </details>
 
 ## About The Project
-This is a fullstack application for showing geographical information of entities on the map. First, a dummy data of 10 drivers are generated using factory boy. These data are then added to the database. A scheduled task updates the positions of each driver in a given range every 5 seconds and updates the database. Frontend fetches the data from django backend and shows the positions of each driver with different colored markers on the map. When the page is refreshed change of the positions can be observed.
+This is a fullstack application for showing geographical information of entities on the map. First, a dummy data of 10 drivers are generated using factory boy. These data are then added to the database. A scheduled task updates the positions of each driver in a given range every 5 seconds and updates the database. Frontend fetches the data from django backend and shows the positions of each driver with different colored markers on the map. When the page is refreshed change of the positions can be observed. If you hover over to a driver on the map you can see additional information about the driver such as name, nationality, language, phone, licence plate, etc. as a tooltip.
 
 ### Built With
 * [React](https://reactjs.org/) - A JavaScript library for creating single page apps.
