@@ -53,22 +53,26 @@ In order to run this project some libraries should be installed and configured. 
  sudo apt-get install postgresql-contrib
  sudo apt install redis-server
  ```
+
 2) We need to install the python libraries.
  ```sh
 python3 -m venv virtual-env
 source virtual-env/bin/activate
 pip3 install -r requirements.txt
  ```
-3) We should create and activate a postgres database. It is created without password in this example. We can also create the database using PgAdmin4 with GUI.
+ If you get errors when installing requirements (with pip3 install -r requirements.txt), 
  ```sh
-  sudo service postgresql initdb
-  sudo service enable postgresql
-  sudo service start postgresql
-  sudo -u postgres psql
-  CREATE DATABASE <myDatabase>
+  sudo apt-get install python-psycopg2
+  sudo apt-get install libpq-dev
+  pip3 install -r requirements.txt
+```
+3) We should create and activate a postgres database. It is created without password in this example. We can create the database using PgAdmin4 with GUI.
+ ```sh
+  sudo service postgresql start
    ```
+We should add postGIS as an extension to our new database. (Check extensions in the database directory tree to add new extensions from dropdown list in PgAdmin4)
 ### Configuration
-In projects settings.py file we configure the database locally.
+In projects driverTracker/settings.py file we configure the database locally.
 ```sh
 DATABASES = {
     "default": {
