@@ -94,7 +94,7 @@ python3 manage.py migrate
 ```
 Then we create super user for our django app. With this user credentials we can switch to admin panel in  http://localhost:8000/admin after running the server.
 ```sh
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 We should also run the redis-server in another terminal in the background.
 ```sh
@@ -108,9 +108,9 @@ Finally, we switch to frontend and install packages.
    ```
 ### How To Run
 1) Redis-server and Postgres should be up and running in the background.
-2) In "/driverTracker/mapApp/management/commands", seed.py file creates a django command to populate the data from terminal. (default: 10 drivers). We can run this script;
+2) In "/driverTracker/mapApp/management/commands", I created a custom django command as seed.py. It is used to populate the driver data using factories.py file from the command line. (default: 10 drivers). We can run this script;
    ```sh
-    python3 manage.py seed.py
+    python3 manage.py seed
    ```
 3) We should be in the driverTracker folder and run the celery command to start scheduled worker and tasks in different terminals (both runs in the background)
 ```sh
@@ -120,7 +120,7 @@ Finally, we switch to frontend and install packages.
 
 4) Then, we run our django backend inside the django-driver-tracker;
 ```sh
-  python3 manage.py driverTracker runserver
+  python3 manage.py runserver
  ```
  Now server should be running in http://127.0.0.1:8000/
 
