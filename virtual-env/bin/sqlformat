@@ -1,4 +1,4 @@
-#!/Users/hande.akin/Documents/challenge/driverTracker/virtual-env/bin/python3
+#!/Users/hande.akin/Documents/challenge/driverTracker/virtual-env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
