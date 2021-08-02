@@ -32,10 +32,10 @@ This is a fullstack application for showing geographical information of entities
 * [FactoryBoy](https://factoryboy.readthedocs.io/en/stable/) - Test fixture creator/ dummy data generator.
 ### Project Structure Explained
   - manage.py is coming from django framework, resides in the main folder and used to setup the server.
-  - All project settings are inside the "./driverTracker/mapApp" folder.
+  - All project settings are inside the ".django-driver-tracker/mapApp" folder.
   - mapApp is our django application which serves the backend. It has models, views, serializers for the database operations.
   - We populate dummy data and insert into the database. In driverTracker/tests folder we have     factories.py file which generates and saves the initial drivers data for us. In "How To Run" section we will explain how to generate fake initial data.
-  - We have 2 frontends at the moment, one of them is in ./driverTracker/static folder and can be ignored. However, it also shows a map with markers and reachable at http://127.0.0.1:8000/driverTracker/map. I also implemented a more complex UI with React and React Hooks inside the ./driverTracker/frontend folder. And I would prefer using the latter one as a frontend application.
+  - We have 2 frontends at the moment, one of them is in .django-driver-tracker/static folder and can be ignored. However, it also shows a map with markers and reachable at http://127.0.0.1:8000django-driver-tracker/map. I also implemented a more complex UI with React and React Hooks inside the .django-driver-tracker/frontend folder. And I would prefer using the latter one as a frontend application.
   - In mapApp/fixtures folder I stored an example information about drivers as a json file.
   - Scheduled tasks are implemented at ".driverTracker/mapApp/tasks.py". It gets drivers from the database and updates each driver's locations in every 5 seconds.
   - Frontend calls the backend with 'api/markers' and gets all drivers as a geojson object. Then shows them on the map. Each driver has a unique color and can be tracked easily. 
@@ -83,7 +83,7 @@ DATABASES = {
 ```
 Now we should migrate the database,
 ```sh
-cd ~/driverTracker
+cd ~/django-driver-tracker
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
@@ -98,7 +98,7 @@ redis-server
 Finally, we switch to frontend and install packages.
 
    ```sh
-   cd ~/driverTracker/frontend
+   cd ~/django-driver-tracker/frontend
    npm install
    ```
 ### How To Run
@@ -109,17 +109,17 @@ Finally, we switch to frontend and install packages.
    ```
 3) We should be in the driverTracker folder and run the celery command to start scheduled worker and tasks in different terminals (both runs in the background)
 ```sh
-  celery -A driverTracker worker 
-  celery -A driverTracker beat -S django 
+  celery -A django-driver-tracker worker 
+  celery -A django-driver-tracker beat -S django 
  ```
 
-4) Then, we run our django backend inside the /driverTracker;
+4) Then, we run our django backend inside the django-driver-tracker;
 ```sh
   python3 manage.py driverTracker runserver
  ```
  Now server should be running in http://127.0.0.1:8000/
 
- 5) In another terminal we go to /driverTracker/frontend folder and start the front-end.
+ 5) In another terminal we go to "django-driver-tracker/frontend" folder and start the front-end.
  ```sh 
   npm run start
  ```
